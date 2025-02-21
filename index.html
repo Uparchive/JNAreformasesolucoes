@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JNA Reformas e Soluções</title>
+  <meta name="description" content="Serviços de reformas, manutenção de telhados e desentupimentos com qualidade e confiança.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="JNA Reformas e Soluções">
+  <meta property="og:description" content="Serviços de reformas, manutenção de telhados e desentupimentos com qualidade e confiança.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url" content="https://seusite.com">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Acessibilidade: link para pular conteúdo -->
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container header-container">
+      <a href="#hero" class="logo-link">
+        <img src="logo.png" alt="JNA Reformas e Soluções" class="logo" />
+      </a>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="main-content">
+    <!-- Seção Hero -->
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <h1>Soluções em Reformas e Manutenção</h1>
+        <p>Qualidade e confiança em cada serviço realizado.</p>
+        <a
+          href="https://wa.me/5511982879526"
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Fale Conosco</a>
+      </div>
+    </section>
+
+    <!-- Divisor -->
+    <div class="divisor"></div>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre fade-in">
+      <div class="container">
+        <h2 id="texto-sobre" class="digitando"></h2>
+        <p id="descricao-sobre"></p>
+      </div>
+    </section>
+
+    <!-- Divisor -->
+    <div class="divisor"></div>
+
+    <!-- Seção Serviços (Slider) -->
+    <section id="servicos" class="servicos">
+      <div class="container">
+        <h2>Nossos Serviços</h2>
+        <div class="slider-container">
+          <button class="prev-slide" aria-label="Slide anterior">&#10094;</button>
+          <div class="slider" role="region" aria-label="Galeria de serviços">
+            <!-- Slide 1 -->
+            <div class="slide active">
+              <img src="telhados.png" alt="Manutenção e troca de telhados" />
+              <div class="overlay">
+                <h3>🔨 Manutenção e troca de telhados</h3>
+                <p>Garantimos segurança e durabilidade para o seu telhado.</p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+              <img src="desentupimentos.png" alt="Desentupimentos" />
+              <div class="overlay">
+                <h3>🚰 Desentupimentos</h3>
+                <p>Resolvemos problemas de encanamento de forma rápida e eficaz.</p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img src="reformasgerais.png" alt="Reformas em geral" />
+              <div class="overlay">
+                <h3>🏠 Reformas em geral</h3>
+                <p>Transformamos sua casa ou empresa com reformas personalizadas.</p>
+              </div>
+            </div>
+          </div>
+          <button class="next-slide" aria-label="Próximo slide">&#10095;</button>
+          <div class="slider-indicators" aria-label="Indicadores do slider"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor -->
+    <div class="divisor"></div>
+
+    <!-- Seção Vídeo -->
+    <section id="video" class="video-section">
+      <div class="container">
+        <h2>Conheça Nosso Trabalho</h2>
+        <p>Assista ao vídeo e saiba mais sobre nossos serviços e diferenciais.</p>
+        <div class="video-wrapper">
+          <iframe src="https://uparchive.github.io/uploadgalaxy/embed.html?videoUrl=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Farmazene-acd30.appspot.com%2Fo%2Fuploads%252Fz0wQUWxFhKRBeMLIHIjOHd1dpHn2%252FJNA%2520REFORMAS%2520E%2520SOLU%25C3%2587%25C3%2595ES%2520APRESENTA%25C3%2587%25C3%2583O.mp4%3Falt%3Dmedia%26token%3Dc148ca39-3b6f-4e2d-920f-0e17ac7e2687" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor -->
+    <div class="divisor"></div>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2>Entre em Contato</h2>
+        <p>Estamos prontos para atender suas necessidades. Entre em contato agora!</p>
+        <a
+          href="https://wa.me/5511982879526"
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Chamar no WhatsApp</a>
+        <ul class="contato-info">
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:contato@jna.com.br">contato@jna.com.br</a>
+          </li>
+          <li>
+            <strong>Telefone:</strong>
+            <a href="tel:+5511982879526">(11) 98287-9526</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 JNA Reformas e Soluções - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
