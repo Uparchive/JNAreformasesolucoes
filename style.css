@@ -5,15 +5,19 @@
   /* Cores principais */
   --primary-color: #ff9800;     /* Cor de destaque */
   --secondary-color: #e65100;   /* Cor de apoio */
-  --dark-color: #121212;        /* Fundo escuro principal */
+  
+  /* Ajuste dos tons para tema claro */
+  --dark-color: #333333;        /* Tom escuro para textos */
   --light-color: #ffffff;       /* Branco */
-  --text-color: #cccccc;        /* Texto padrão (cinza claro) */
-  --text-light: #999999;        /* Texto ainda mais claro, para subtítulos */
+  --text-color: #333333;        /* Texto padrão */
+  --text-light: #666666;        /* Texto mais claro, para subtítulos */
 
   /* Fontes e tamanhos */
   --font-family: 'Poppins', sans-serif;
   --font-size-base: 16px;
-  --header-height: 70px;
+
+  /* Aumente o header-height para acomodar logo maior */
+  --header-height: 120px;
 
   /* Transições e espaçamentos */
   --transition-speed: 0.3s;
@@ -34,7 +38,7 @@ html {
 }
 
 body {
-  background: var(--dark-color);
+  background: var(--light-color);
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -72,9 +76,9 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #1b1b1b;
+  background: var(--light-color);
   z-index: 999;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header-container {
@@ -82,10 +86,12 @@ header {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
+  padding: 0 1rem;
 }
 
+/* Logo maior */
 .logo {
-  height: 50px;
+  max-height: 100px; /* Ajuste conforme necessidade */
   width: auto;
 }
 
@@ -96,7 +102,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: var(--light-color);
+  color: var(--dark-color);
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition-speed);
@@ -109,7 +115,7 @@ nav ul li a:hover {
 .menu-toggle {
   display: none;
   background: transparent;
-  color: var(--light-color);
+  color: var(--dark-color);
   font-size: 1.5rem;
   border: none;
   cursor: pointer;
@@ -118,11 +124,12 @@ nav ul li a:hover {
 /* ==============================
    SEÇÃO HERO
 ============================== */
+/* Camada escura para melhor contraste na imagem de fundo */
 .hero {
   height: 100vh;
   background: linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
     ),
     url('imagem1.png') center/cover no-repeat;
   position: relative;
@@ -141,20 +148,18 @@ nav ul li a:hover {
   font-size: 3rem;
   margin-bottom: 15px;
   font-weight: 700;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
 }
 
 .btn {
   display: inline-block;
   padding: 15px 30px;
   background: var(--primary-color);
-  color: var(--dark-color);
+  color: var(--light-color);
   font-weight: 600;
   text-decoration: none;
   border-radius: 30px;
@@ -239,7 +244,7 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.3);
   z-index: 1;
 }
 
@@ -263,7 +268,7 @@ nav ul li a:hover {
   display: inline-block;
   font-size: 2.5rem;
   font-weight: 700;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.4);
   padding: 15px 20px;
   border-radius: 5px;
 }
@@ -273,7 +278,7 @@ nav ul li a:hover {
   max-width: 700px;
   margin-top: 20px;
   font-size: 1.1rem;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.4);
   padding: 15px 20px;
   border-radius: 5px;
 }
@@ -282,8 +287,8 @@ nav ul li a:hover {
    SEÇÃO SERVIÇOS (SLIDER)
 ============================== */
 .servicos {
-  background: #1a1a1a;
-  color: var(--text-color);
+  background: var(--light-color);
+  color: var(--dark-color);
   padding: 100px 0;
   text-align: center;
 }
@@ -292,7 +297,7 @@ nav ul li a:hover {
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-weight: 700;
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 
 .slider-container {
@@ -364,7 +369,7 @@ nav ul li a:hover {
   top: 50%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.4);
-  color: var(--text-color);
+  color: var(--dark-color);
   border: none;
   padding: 15px;
   cursor: pointer;
@@ -432,10 +437,21 @@ nav ul li a:hover {
    SEÇÃO CONTATO
 ============================== */
 .contato {
-  background: #1b1b1b;
-  color: var(--light-color);
+  background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+  color: var(--dark-color);
   padding: 80px 0;
   text-align: center;
+  position: relative;
+}
+
+/* Card para destacar a área de contato */
+.contato .contact-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .contato h2 {
@@ -447,28 +463,49 @@ nav ul li a:hover {
 .contato p {
   margin-bottom: 20px;
   color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.contato a.btn {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .contato-info {
   list-style: none;
   padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .contato-info li {
-  margin: 10px 0;
+  color: var(--dark-color);
+  font-size: 1rem;
 }
 
-.contato-info a {
-  color: var(--light-color);
-  text-decoration: underline;
+.contato-info li strong {
+  margin-right: 5px;
+}
+
+.contato-info li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+.contato-info li a:hover {
+  color: var(--secondary-color);
 }
 
 /* ==============================
    SEÇÃO VÍDEO
 ============================== */
 .video-section {
-  background: #1b1b1b;
-  color: var(--light-color);
+  background: var(--light-color);
+  color: var(--dark-color);
   padding: 80px 0;
   text-align: center;
 }
@@ -513,8 +550,9 @@ nav ul li a:hover {
   z-index: 1000;
 }
 
+/* Ícone maior do WhatsApp */
 .whatsapp-btn img {
-  width: 60px;
+  width: 80px;
   height: auto;
   transition: transform var(--transition-speed);
 }
@@ -526,12 +564,14 @@ nav ul li a:hover {
 /* ==============================
    RODAPÉ
 ============================== */
+/* Rodapé com gradiente suave */
 footer {
-  background: #1b1b1b;
-  color: var(--light-color);
+  background: linear-gradient(180deg, #f8f8f8 0%, #f2f2f2 100%);
+  color: var(--dark-color);
   text-align: center;
   padding: 15px 0;
   font-size: 0.9rem;
+  position: relative;
 }
 
 footer p {
@@ -550,7 +590,7 @@ footer p {
     display: none;
     flex-direction: column;
     gap: 15px;
-    background: #1b1b1b;
+    background: var(--light-color);
     position: absolute;
     top: var(--header-height);
     right: 0;
@@ -561,10 +601,6 @@ footer p {
 
   nav ul.active {
     display: flex;
-  }
-
-  .header-container {
-    padding: 0 1rem;
   }
 
   .hero h1 {
